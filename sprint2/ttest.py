@@ -1,10 +1,10 @@
 from math import sqrt
 from typing import Optional, Union
 
-
-# pep8-naming: проверяет именование классов, функций и переменных в 
+# pep8-naming: проверяет именование классов, функций и переменных в
 # соответствии с PEP 8;
 # flake8-isort: проверяет корректность последовательности импортов
+
 
 def add_numbers(first: int, second: int) -> int:
     return first + second
