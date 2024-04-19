@@ -1,37 +1,37 @@
-# pygame_test.py
+class Robot:
+    # Состояние батареи базовой станции:
+    base_battery_status = 100
 
-# Импортировать библиотеку Pygame.
-import pygame
+    def __init__(self, name):
+        self.name = name
 
-# Инициализировать библиотеку Pygame.
-pygame.init()
+    # Декорируем и изменяем метод update_base_battery_status(),
+    # чтобы менять значение атрибута не в объекте, а в классе:
+    @classmethod
+    def update_base_battery_status(cls, new_status):  # Указываем аргумент cls.
+        """Обновляет состояние батареи базовой станции."""
+        # Присваиваем новое значение атрибуту класса.
+        cls.base_battery_status = new_status
 
-# Создать окно размером 800x600.
-screen = pygame.display.set_mode((800, 600))
-# Задать окну заголовок.
-pygame.display.set_caption('Пример графического окна Pygame')
-
-
-running = True
-
-# Описание главного цикла игры.
-# Этот цикл работает до тех пор, пока пользователь не закроет окно.
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-    # Рисование линии.
-    pygame.draw.line(screen, (255, 0, 0), (100, 100), (700, 500), 5)
-
-    # Рисование квадрата.
-    # Квадрат с верхним левым углом в точке (300, 200) и размерами 200x200 
-    # будет нарисован зелёным цветом.
-    pygame.draw.rect(screen, (0, 128, 0), pygame.Rect(300, 200, 200, 200))
-
-    # Отобразить нарисованные элементы в окне.
-    pygame.display.update()
+    def report(self):
+        """Печатает в консоли состояние батареи базовой станции."""
+        print(
+            f'{self.name} reporting: Battery status is '
+            f'{self.base_battery_status}%'
+        )
 
 
-# Деинициализирует все модули pygame, которые были инициализированы ранее.
-pygame.quit()
+# Создаём двух роботов:
+robot1 = Robot('R2-D2')
+robot2 = Robot('C-3PO')
+
+# Печатаем состояние батареи:
+robot1.report()
+robot2.report()
+
+# Обновляем статус батареи в классе: обращаемся не к объекту, а к классу.
+Robot.update_base_battery_status(80)
+
+# Снова печатаем состояние батареи:
+robot1.report()
+robot2.report()
