@@ -1,7 +1,10 @@
 '''ID решения 114030549'''
 
 
-def check_platforms(sorted_robots: list, limit: int) -> int:
+def count_platforms(sorted_robots: list, limit: int) -> int:
+    '''A function which takes a sorted list of robots weights and an weight
+    limit one platform can take, returns amount of platforms
+    needed to carry all robots.'''
     counter = 0
     left_flag = 0
     right_flag = len(sorted_robots)-1
@@ -22,4 +25,4 @@ def check_platforms(sorted_robots: list, limit: int) -> int:
 if __name__ == '__main__':
     robots = [int(robot_weight) for robot_weight in input().split()]
     limit = int(input())
-    print(check_platforms(sorted(robots), limit))
+    print(count_platforms(sorted(robots), limit))
