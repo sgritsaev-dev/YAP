@@ -36,5 +36,5 @@ def merge(left, right):
     return result + left[left_idx:] + right[right_idx:]
 
 
-test_array = [5, 4, 9, 10, 8, 3, 11, 1, 7, 6, 2]
+test_array = [0, 1, 3, 2]
 print(merge_sort(test_array))
