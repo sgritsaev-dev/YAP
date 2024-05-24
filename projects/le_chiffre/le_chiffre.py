@@ -5,7 +5,7 @@ import re
 
 chiffre = input()
 
-PATTERN = "([0-9]{0,}\\[.*?\\])|([0-9]{0,}[a-zA-Z|а-яА-Я]*)"
+PATTERN = "([0-9]{0,}\\[.*\\])|([0-9]{0,}\\[.*?\\])|([0-9]{0,}[a-zA-Z|а-яА-Я]*)"
 
 
 def splitter(digit: str, text: str) -> list:
