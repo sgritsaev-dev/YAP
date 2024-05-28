@@ -95,4 +95,4 @@ def stringer(awful_list_of_lists: list) -> str:
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-    print(stringer(deshifrator(input())))
+    print(stringer(deshifrator('2cp3[a2[b]c]g')))
