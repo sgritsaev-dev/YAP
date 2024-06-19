@@ -1,0 +1,83 @@
+{% comment %} <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Семантика - сила">
+    <title>Тестовое задание на понимание семантических блоков</title>
+  </head>
+  <body>
+      <header>
+          <nav></nav>
+      </header>
+      <aside></aside>
+      <main>
+          <section>
+              <article></article>
+              <article></article>
+          </section>
+      </main>
+      <footer>
+          <nav></nav>
+      </footer>
+  </body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Дама сдавала багаж | С.Маршак</title>
+    <style>
+      body {
+        background: orange;
+      }
+      footer,
+      #top-nav {
+        background: red;
+      }
+      .nav-item {
+        display: inline-block;
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+      .active a {
+        color: white;
+      }
+      .negative {
+        color: white;
+        background: black;
+      }
+      #footer-inner {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="top-nav">
+        <ul>
+          <li class="nav-item active">
+            <a href="/">Главная страница</a>
+          </li>
+          <li class="nav-item">
+            <a href="about/">О сайте</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <p class="negative">
+        Дама сдавала багаж:
+      </p>
+      <ul>
+        <li>Диван,</li>
+        <li>Чемодан,</li>
+        <li>Саквояж...</li>
+      </ul>
+    </main>
+    <footer>
+      <div id="footer-inner">
+        Текст в подвале
+      </div>
+    </footer>
+  </body>
+</html>
