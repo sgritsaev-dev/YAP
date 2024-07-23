@@ -65,16 +65,22 @@ class IceCream(PublishedModel):
         verbose_name='Категория'
     )
     toppings = models.ManyToManyField(Topping, verbose_name='Топпинги')
+<<<<<<< HEAD
     output_order = models.PositiveSmallIntegerField(
         'Порядок отображения',
         default=100
     )
     price = models.DecimalField(max_digits=5, decimal_places=2)
+=======
+>>>>>>> 632c33d309d7e0d6f2eb13f5dbd36bb5e0f4f1e7
 
     class Meta:
         verbose_name = 'мороженое'
         verbose_name_plural = 'Мороженое'
+<<<<<<< HEAD
         ordering = ('output_order', 'title')
+=======
+>>>>>>> 632c33d309d7e0d6f2eb13f5dbd36bb5e0f4f1e7
 
     def __str__(self):
         return self.title
